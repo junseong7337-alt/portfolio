@@ -45,8 +45,10 @@ p,li{text-wrap:pretty}
 .top b{font-weight:800}.top span{color:var(--mute);margin-left:8px}
 .top a{text-decoration:none;font-weight:700;padding:8px 16px;border:1.5px solid var(--tx);border-radius:99px;background:#fff;transition:background .25s,color .25s,border-color .25s}
 .top a:hover{background:var(--red);border-color:var(--red);color:#fff}
+.tnav{display:flex;align-items:center;gap:8px}.top a{white-space:nowrap}.top a.tl{border-color:var(--line);background:rgba(255,255,255,.85)}.top a.tl::after{content:"↗";margin-left:6px;font-weight:600}.top i.tlg{font-style:normal}
 .mm{position:fixed;z-index:32;top:9px;left:50%;display:flex;align-items:center;gap:10px;padding:6px 14px 6px 8px;border-radius:99px;background:rgba(255,255,255,.95);box-shadow:0 0 0 1px var(--line2),0 10px 20px -14px rgba(17,17,18,.5);opacity:0;transform:translate(-50%,-8px);transition:opacity .4s,transform .4s;pointer-events:none}
 .mm.on{opacity:1;transform:translate(-50%,0)}
+@media (max-width:960px){.mm{top:66px}}
 .mbar{display:flex;gap:3px;flex:none;padding-left:4px}
 .mbar i{width:8px;height:15px;border-radius:2.5px;border:1.3px solid #BDBDC2;transition:background .3s,border-color .3s}
 .mbar i.on{border-color:var(--red)}.mbar i.now{border-color:var(--red);background:var(--red)}
@@ -667,6 +669,7 @@ p,li{text-wrap:pretty}
 @media (max-width:560px){
   body{font-size:16px}
   .top span{display:none}
+  .tnav{gap:6px}.top a{padding:7px 12px;font-size:13px}.top i.tlg{display:none}.top a.tl::after{margin-left:4px}
   .hero{padding-top:76px}
   .hero h1{font-size:7.1vw;line-height:1.36}
   .ask{padding:12px 18px 12px 15px;font-size:15.5px;gap:10px}.ask .q{white-space:normal}.ask svg{width:19px;height:19px}
@@ -844,7 +847,7 @@ p,li{text-wrap:pretty}
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="rough" x="-5%" y="-30%" width="110%" height="160%"><feTurbulence type="fractalNoise" baseFrequency=".02 .11" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="9" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
-<header class="top" id="top"><p><b>김준성</b><span>브랜드 마케터 · 경력 약 4년</span></p><a href="#end">Contact</a></header>
+<header class="top" id="top"><p><b>김준성</b><span>브랜드 마케터 · 경력 약 4년</span></p><nav class="tnav"><a class="tl" href="files/portfolio_kimjunseong.pdf" target="_blank" rel="noopener"><i class="tlg">포트폴리오 </i>PDF</a><a class="tl" href="files/career_kimjunseong.pdf" target="_blank" rel="noopener">경력기술서</a><a href="#end">Contact</a></nav></header>
 <div class="cur" id="cur" aria-hidden="true"><span></span></div>
 
 <main>
